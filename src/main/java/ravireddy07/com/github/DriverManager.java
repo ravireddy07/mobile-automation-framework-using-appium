@@ -60,9 +60,6 @@ public class DriverManager extends BaseTest {
             desiredCapabilities.setCapability("autoGrantPermissions", true);
             desiredCapabilities.setCapability("autoAcceptAlerts", true);
             desiredCapabilities.setCapability("waitForIdleTimeout", 0);
-            // desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
-            // desiredCapabilities.setCapability("printPageSourceOnFindFailure", true);
-            // desiredCapabilities.setCapability(MobileCapabilityType.AUTO_WEBVIEW, true);
 
             if(envID.equals("remote")) {
                 desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, deviceData.get("cloudDeviceName").toString());

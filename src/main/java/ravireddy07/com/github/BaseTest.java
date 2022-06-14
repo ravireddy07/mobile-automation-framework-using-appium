@@ -115,7 +115,7 @@ public class BaseTest {
     @BeforeSuite(alwaysRun = true)
     public void beforeSuite(@Optional String envID) throws Exception {
         if(envID.equals("local")) {
-            ThreadContext.put("ROUTINGKEY", "ServerLogs");
+            ThreadContext.put("ROUTINGKEY", "ServerLogs"); // Appium Server Logs
             server = getAppiumService("Mac OS X"); // Need to provide the OS. Windows or Mac
             if(!checkIfAppiumServerIsRunnning(4723)) {
                 server.start();
@@ -336,7 +336,7 @@ public class BaseTest {
     // Debug Methods
 
     public void waitForVisibility(MobileElement e) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), TestUtils.WAIT);
+        WebDriverWait wait = new WebDriverWait(getDriver(), 40);
         wait.until(ExpectedConditions.visibilityOf(e));
     }
 

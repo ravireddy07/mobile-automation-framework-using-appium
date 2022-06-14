@@ -4,8 +4,8 @@
     <parameter name="platformName" value="iOS"/>
     <test name="iOS">
         <classes>
-            <class name="debug"/>
-            <class name="debug2"/>
+            <class name="ravireddy07.com.github.testcases.debug"/>
+            <class name="ravireddy07.com.github.testcases.debug2"/>
         </classes>
         <listeners>
             <listener class-name="ravireddy07.com.github.listeners.TestListener"/>

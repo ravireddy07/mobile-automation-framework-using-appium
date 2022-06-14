@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="ALMA" parallel="methods" thread-count="2">
-    <parameter name="envID" value="remote"/>                <!-- local/remote -->
-    <parameter name="platformName" value="Android"/>        <!--  Android/iOS -->
-    <test name="Courses">                                   <!-- group-by-instances="true" preserve-order="true" -->
+<suite name="suiteName" parallel="methods" thread-count="1"> <!-- group-by-instances="true" preserve-order="true" -->
+    <parameter name="envID" value="remote"/>
+    <parameter name="platformName" value="Android"/>
+    <test name="testName">
         <classes name="className">
-            <class name="debug"/>
+            <class name="ravireddy07.com.github.testcases.debug"/>
         </classes>
     </test>
     <listeners>

@@ -26,8 +26,8 @@ public class ExtentReport {
     public synchronized static ExtentReports getReporter() {
         if(extent == null) {
             ExtentSparkReporter spark = new ExtentSparkReporter(filePath);
-            spark.config().setReportName("Auzmor Learn Mobile App");
-            spark.config().setDocumentTitle("Test Suite Report");
+            spark.config().setReportName("Report Name");
+            spark.config().setDocumentTitle("Sprint Testing Report");
             spark.config().setTheme(Theme.DARK);
             extent = new ExtentReports();
             extent.attachReporter(spark);

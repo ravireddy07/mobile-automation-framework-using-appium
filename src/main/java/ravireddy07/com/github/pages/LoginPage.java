@@ -27,7 +27,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElem
 
 public class LoginPage extends BaseTest {
     TestUtils utils = new TestUtils();
-    WebDriverWait wait = new WebDriverWait(getDriver(), TestUtils.WAIT);
+    WebDriverWait wait = new WebDriverWait(getDriver(), 10);
     Actions actionsObject;
     int heightOfScreen = getDriver().manage().window().getSize().getHeight();
     int widthOfScreen = getDriver().manage().window().getSize().getWidth();

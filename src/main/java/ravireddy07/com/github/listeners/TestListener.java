@@ -44,8 +44,7 @@ public class TestListener implements ITestListener, IAnnotationTransformer {
     }
 
     @Override
-    public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-    }
+    public void onTestFailedButWithinSuccessPercentage(ITestResult result) {}
 
     @Override
     public void onFinish(ITestContext result) {

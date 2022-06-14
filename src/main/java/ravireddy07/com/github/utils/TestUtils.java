@@ -15,15 +15,14 @@ import java.util.Date;
 
 @SuppressWarnings({"WeakerAccess", "unused"})
 public class TestUtils {
-    public static final long WAIT = 40;
 
     public String dateTime() {
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd"); // yyyy-MM-dd-HH-mm-ss
         Date date = new Date();
         return dateFormat.format(date);
     }
 
-    public void log(String txt) {
+    public static void log(String txt) {
         BaseTest base = new BaseTest();
         String msg = Thread.currentThread().getId() + ":" + base.getPlatform() + ":" + base.getDeviceName() + ":" + Thread.currentThread().getStackTrace()[2].getClassName() + ":" + txt;
         String strFile = "logs" + File.separator + base.getPlatform() + "_" + base.getDeviceName() + File.separator + base.getDateTime();
@@ -44,7 +43,7 @@ public class TestUtils {
         printWriter.close();
     }
 
-    public Logger log() {
+    public static Logger log() {
         return LogManager.getLogger(Thread.currentThread().getStackTrace()[2].getClassName());
     }
 
@@ -80,18 +79,21 @@ public class TestUtils {
         boolean flag = false;
         String runId = "190";
         try {
-            JSONObject getUserTCs = JsonParser.GetTestCaseId(module);
-            testCaseId = getUserTCs.get(testCaseName).toString();
+            if(flag) {
+                JSONObject getUserTCs = JsonParser.GetTestCaseId(module);
+                testCaseId = getUserTCs.get(testCaseName).toString();
+                String payload = (result) ? ("{\"status_id\":\"1\"}") : ("{\"status_id\":\"5\"}");
+                String requestUrl = "https://auzmorhr.testrail.io/index.php?/api/v2/add_result_for_case/" + runId + "/" + testCaseId;
+                sendPostRequest(requestUrl, payload);
+            }
+            if(result)
+                System.out.println("TestCase: " + testCaseId + " Passed");
+            else
+                System.out.println("TestCase: " + testCaseId + " Failed");
+            /****/ // Logs Required
         } catch(Exception e) {
             e.printStackTrace();
             throw new Exception("Something Wrong with Testcase name in Json(TestcaseID) file, Check & Try again");
         }
-        if(flag) {
-            String payload = (result) ? ("{\"status_id\":\"1\"}") : ("{\"status_id\":\"5\"}");
-            String requestUrl = "https://auzmorhr.testrail.io/index.php?/api/v2/add_result_for_case/" + runId + "/" + testCaseId;
-            sendPostRequest(requestUrl, payload);
-        }
-        // System.out.println("TestCase: " + testCaseId + " Failed");
-        /****/ // Logs Required
     }
 }

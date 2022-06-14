@@ -1,7 +1,5 @@
 # Getting Started
 
-# Installation Setup
-
 ## Install JAVA JDK
 
 -   Any JDK version which **above JDK 8** will work, Follow steps from [here] to install(https://www.guru99.com/install-java.html)
@@ -20,36 +18,6 @@
 ## Install Node.js and npm
 
 -   Install Node.js from [here](https://nodejs.org/en/)
-
-## Install Appium server(Appium CLI)
-
-**Note:** _Latest Version is recommended_
-
-    ```sh
-    # install
-    npm install -g appium
-
-    # verify
-    appium -v
-
-    # path
-    where appium
-    ```
-
-## Install Appium GUI and Inspector
-
--   Install Appium Inspector from [Here](https://github.com/appium/appium-inspector/releases)
-    -   _Latest Version is recommended_
--   Install Appium GUI from [Here](https://github.com/appium/appium-desktop/releases). Although its not mandatory, as it is required to start the appium server that we can do from terminal through below command.
-
-    -   Recommended Version `1.22.0`.
-
-    ```sh
-    # appium -p port-id
-    appium -p 4723
-    ```
-
-**Note:** There might some issues while launching/Inspecting iOS Simulator wrt to WDA(WebDriverAgent). The primary reason is the Xcode build failure and this may varies from machine to machine(Completely dependent on machine, not installation or config issue).
 
 ## Set Environment Variables
 
@@ -101,18 +69,6 @@
     -   **JAVA_HOME**: `C:\Program Files\Java\jdk1.8.0_202\` _(under System variables)_
     -   And Add **_SDK tools_ and _SDK Platform tools_** path as well under System variables.
 
-## Verify installation using appium-doctor(Optional)
-
-find more about [Appium Doctor](https://github.com/appium/appium-doctor)
-
-    ```sh
-    # install
-    npm install -g appium-doctor
-
-    # verify
-    appium-doctor -h
-    ```
-
 ## Emulator Setup
 
 #### Android
@@ -152,6 +108,51 @@ find more about [Appium Doctor](https://github.com/appium/appium-doctor)
     ```
 
 </br>
+
+# Installation Setup for Appium
+
+## Install Appium server(Appium CLI)
+
+**Note:** _Latest Version is recommended_
+
+    ```sh
+    # install
+    npm install -g appium
+
+    # verify
+    appium -v
+
+    # path
+    where appium
+    ```
+
+## Install Appium GUI and Inspector
+
+-   Install Appium Inspector from [Here](https://github.com/appium/appium-inspector/releases)
+    -   _Latest Version is recommended_
+-   Install Appium GUI from [Here](https://github.com/appium/appium-desktop/releases). Although its not mandatory, as it is required to start the appium server that we can do from terminal through below command.
+
+    -   Recommended Version `1.22.0`.
+
+    ```sh
+    # appium -p port-id
+    appium -p 4723
+    ```
+
+**Note:** There might some issues while launching/Inspecting iOS Simulator wrt to WDA(WebDriverAgent). The primary reason is the Xcode build failure and this may varies from machine to machine(Completely dependent on machine, not installation or config issue).
+
+## Verify installation using appium-doctor(Optional)
+
+find more about [Appium Doctor](https://github.com/appium/appium-doctor)
+
+    ```sh
+    # install
+    npm install -g appium-doctor
+
+    # verify
+    appium-doctor -h
+    ```
+
 </br>
 
 # Useful Commands
