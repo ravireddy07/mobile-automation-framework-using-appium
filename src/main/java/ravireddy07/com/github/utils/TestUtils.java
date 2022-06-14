@@ -43,7 +43,7 @@ public class TestUtils {
         printWriter.close();
     }
 
-    public static Logger log() {
+    public Logger log() {
         return LogManager.getLogger(Thread.currentThread().getStackTrace()[2].getClassName());
     }
 
