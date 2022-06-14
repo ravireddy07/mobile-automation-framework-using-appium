@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<loginData>
+    <string name="learner1">mobile1@gustr.com</string>
+    <string name="learner2">mobile2@gustr.com</string>
+    <string name="learner3">mobile3@gustr.com</string>
+    <string name="learner4">mobile4@gustr.com</string>
+    <string name="learner5">mobile5@gustr.com</string>
+</loginData>
+<testData>
+</testData>

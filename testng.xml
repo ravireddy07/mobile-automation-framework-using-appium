@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="ALMA" parallel="methods" thread-count="2">
+    <parameter name="envID" value="remote"/>                <!-- local/remote -->
+    <parameter name="platformName" value="Android"/>        <!--  Android/iOS -->
+    <test name="Courses">                                   <!-- group-by-instances="true" preserve-order="true" -->
+        <classes name="className">
+            <class name="debug"/>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="ravireddy07.com.github.listeners.TestListener"/>
+    </listeners>
+</suite>

@@ -1,0 +1,22 @@
+{
+  "Android": {
+    "deviceName": "localTestDevice",
+    "OSVersion": "9",
+    "cloudDeviceName": "Samsung Galaxy S9",
+    "cloudOSVersion": "8.0",
+    "build": "1.0.9",
+    "app": "src\\test\\resources\\apps\\app.apk",
+    "sauceAppID": "storage:d2035dd4-f32f-4c12-bd82-5865fad179f1",
+    "browserStackAppID": "bs://1bf14c3a8aa8f957d7746b73c654f557f79d27f5"
+  },
+  "iOS": {
+    "deviceName": "localTestDevice",
+    "OSVersion": "14",
+    "cloudDeviceName": "iPhone XR",
+    "cloudOSVersion": "15",
+    "build": "1.0.9",
+    "app": "src\\test\\resources\\apps\\Runner.app",
+    "sauceAppID": "storage:f5515ee4-7491-46fb-9a2a-0eac94771659",
+    "browserStackAppID": "bs://c3b7b4e798d579395e2c2bb58fcc5d77adc35bb8"
+  }
+}

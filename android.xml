@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="methods" name="Android Build" thread-count="3">
+    <parameter name="envID" value="remote"/>
+    <parameter name="platformName" value="Android"/>
+    <test name="Android">
+        <classes>
+            <class name="debug"/>
+        </classes>
+        <listeners>
+            <listener class-name="ravireddy07.com.github.listeners.TestListener"/>
+        </listeners>
+    </test>
+</suite>

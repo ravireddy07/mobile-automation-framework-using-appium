@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="methods" name="iOS Build" thread-count="3">
+    <parameter name="envID" value="local"/>
+    <parameter name="platformName" value="iOS"/>
+    <test name="iOS">
+        <classes>
+            <class name="debug"/>
+            <class name="debug2"/>
+        </classes>
+        <listeners>
+            <listener class-name="ravireddy07.com.github.listeners.TestListener"/>
+        </listeners>
+    </test>
+</suite>
