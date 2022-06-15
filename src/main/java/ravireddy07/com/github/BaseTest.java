@@ -26,16 +26,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
@@ -186,7 +177,7 @@ public class BaseTest {
         try {
             JSONObject deviceData = JsonParser.getDevicesData(platformName);
             // Logs Initialization
-            setupCustomLogs(platformName, deviceData.get("deviceName").toString());
+            // setupCustomLogs(platformName, deviceData.get("deviceName").toString());
             utils.log().info("'beforeTest' Executed for Local");
         } catch(Exception e) {
             e.printStackTrace();

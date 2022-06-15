@@ -82,9 +82,8 @@ public class TestUtils {
             if(flag) {
                 JSONObject getUserTCs = JsonParser.GetTestCaseId(module);
                 testCaseId = getUserTCs.get(testCaseName).toString();
-                String payload = (result) ? ("{\"status_id\":\"1\"}") : ("{\"status_id\":\"5\"}");
                 String requestUrl = "https://auzmorhr.testrail.io/index.php?/api/v2/add_result_for_case/" + runId + "/" + testCaseId;
-                sendPostRequest(requestUrl, payload);
+                sendPostRequest(requestUrl, (result) ? ("{\"status_id\":\"1\"}") : ("{\"status_id\":\"5\"}"));
             }
             if(result)
                 System.out.println("TestCase: " + testCaseId + " Passed");

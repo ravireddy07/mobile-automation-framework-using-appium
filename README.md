@@ -2,7 +2,7 @@
 
 ## Install JAVA JDK
 
--   Any JDK version which **above JDK 8** will work, Follow steps from [here] to install(https://www.guru99.com/install-java.html)
+-   Any JDK version which **above JDK 8** will work, Follow steps from [here](https://www.guru99.com/install-java.html) to install
 
 ## Install Android Studio
 
