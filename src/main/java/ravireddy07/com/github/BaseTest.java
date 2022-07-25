@@ -325,7 +325,6 @@ public class BaseTest {
     }
 
     // Debug Methods
-
     public void waitForVisibility(MobileElement e) {
         WebDriverWait wait = new WebDriverWait(getDriver(), 40);
         wait.until(ExpectedConditions.visibilityOf(e));
